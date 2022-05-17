@@ -2,7 +2,7 @@ let cities = document.body.querySelector("#cities");
 let submit = document.body.querySelector("#submit");
 let compareBtn = document.body.querySelector(".compareBtn")
 let clearPrevious = document.body.querySelector("#clear")
-let appId = "15503d995eb403b985f0761f2345534a"
+let OpenWeatherappId = "15503d995eb403b985f0761f2345534a"
 // let storedWeather = { ...localStorage }
 
 function bigErrorOmg()
@@ -15,7 +15,7 @@ function displayNewWeather(e)
     if(!cities.value)
         return ;
     if (e.code === "Enter" || e.pointerType === "mouse")
-    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cities.value + "&APPID=" + appId)
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cities.value + "&APPID=" + OpenWeatherappId)
     .then(res => res.json())
     .then(obj =>{
         if(obj.cod === '404')
@@ -35,7 +35,7 @@ function displayNewWeather(e)
 
 function compareWeather()
 {
-
+    console.log("pas encore fait")
 }
 
 
