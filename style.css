@@ -3,3 +3,9 @@ body
     display: flex;
     justify-content: space-between;
 }
+
+.btn
+{
+    border: 2px red solid;
+    margin: 5px;
+}
