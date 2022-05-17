@@ -5,6 +5,7 @@ let clearPrevious = document.body.querySelector("#clear")
 let OpenWeatherappId = "15503d995eb403b985f0761f2345534a"
 let cityOne = document.body.querySelector("#city1")
 let cityTwo = document.body.querySelector("#city2")
+
 // let storedWeather = { ...localStorage }
 
 
@@ -66,6 +67,17 @@ function displayNewWeather(e)
             document.body.querySelector("main").appendChild(div);
             div.innerHTML = obj.city.name + " " + obj.list[0].main.temp + "°C" + " "+ obj.list[1].main.temp + "°C" + " "+ obj.list[2].main.temp + "°C" + " "+ obj.list[3].main.temp + "°C" + " "+ obj.list[4].main.temp + "°C" + " ";
             window.localStorage.setItem(cities.value, JSON.stringify(obj))
+
+
+
+            fetch("https://api.unsplash.com/photos/random?query="+cities.value, {headers :{Authorization: "Client-ID jE4dvuuzG4RCh5skxUQ1hSkPhtSmt_Zq-eRcZzCSo-s"}})
+            .then(res => res.json())
+            .then(unsplash => {
+            console.log(unsplash.urls.raw)
+            let img = document.createElement('img')
+            img.setAttribute("src", unsplash.urls.raw)
+            div.appendChild(img)
+        })
         })
     })
     // console.log(latLon[1]);
@@ -149,3 +161,23 @@ clearPrevious.addEventListener("click", () => {
 // console.log (window.localStorage);
 // window.localStorage.setItem("name", "arno")
 // console.log(window.localStorage);
+
+// let httpHeader = {
+//     header{
+
+//     }
+// }
+// function displayImage()
+// {
+//     fetch("https://api.unsplash.com/photos/random?query="+cities.value, {headers :{Authorization: "Client-ID jE4dvuuzG4RCh5skxUQ1hSkPhtSmt_Zq-eRcZzCSo-s"}})
+//     .then(res => res.json())
+//     .then(obj => {
+//         console.log(obj.urls.raw)
+//         let img = document.createElement('img')
+//         img.setAttribute("src", obj.urls.raw)
+//         document.body.appendChild(img)
+//     })
+    
+
+// }
+// displayImage()
