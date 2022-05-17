@@ -7,6 +7,8 @@ let cityOne = document.body.querySelector("#city1")
 let cityTwo = document.body.querySelector("#city2")
 // let storedWeather = { ...localStorage }
 
+
+
 function bigErrorOmg()
 {
     alert("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
@@ -42,7 +44,11 @@ function displayNewWeather(e)
         latLon.push(obj[0].lon);
         console.log(obj[0].lat)
         fetch("http://api.openweathermap.org/data/2.5/forecast?lat="+latLon[0]+"&lon="+latLon[1]+"&appid=" + OpenWeatherappId)
-        .then(res => res.json())
+        .then(res => { 
+            let a = res.json()
+            console.log(typeof(a))
+            return a
+        })
         .then(obj =>{
             console.log(obj);
             if(obj.cod === '404')
@@ -67,13 +73,47 @@ function displayNewWeather(e)
     .catch(error => console.log(error))
 }
 
+//another function that smells like wet poop but it works
 function compareWeather()
 {
-    console.log("pas encore fait")
+    if(!cityOne.value || !cityTwo.value)
+        return ;
+    let cityOneTemp;
+    let cityTwoTemp;
+    fetch("http://api.openweathermap.org/geo/1.0/direct?q="+cityOne.value+"&limit=1&appid=15503d995eb403b985f0761f2345534a")
+    .then(resOne => resOne.json())
+    .then(objOne =>{
+        let latLon = [];
+        latLon.push(objOne[0].lat);
+        latLon.push(objOne[0].lon);
+        fetch("http://api.openweathermap.org/data/2.5/forecast?lat="+latLon[0]+"&lon="+latLon[1]+"&appid=" + OpenWeatherappId)
+        .then(res => res.json())
+        .then(objOne =>{
+            cityOneTemp =  Math.ceil(Number(objOne.list[0].main.temp) - 273.15);
+        })
+        .then(() =>{
+            fetch("http://api.openweathermap.org/geo/1.0/direct?q="+cityTwo.value+"&limit=1&appid=15503d995eb403b985f0761f2345534a")
+            .then(resTwo => resTwo.json())
+            .then(objTwo =>{
+                let latLon = [];
+                latLon.push(objTwo[0].lat);
+                latLon.push(objTwo[0].lon);
+                fetch("http://api.openweathermap.org/data/2.5/forecast?lat="+latLon[0]+"&lon="+latLon[1]+"&appid=" + OpenWeatherappId)
+                .then(res => res.json())
+                .then(objTwo =>{
+                    cityTwoTemp =  Math.ceil(Number(objTwo.list[0].main.temp) - 273.15);
+                })
+                .then(()=>{
+                    if(cityOneTemp < cityTwoTemp)
+                        compareBtn.innerHTML = "il fait plus chaud dans cityTwo"
+                    else
+                    compareBtn.innerHTML = "il fait plus chaud dans cityOne"
+                })
+            })
+        })
+    })
+
 }
-
-
-
 
 function displayStoredWeather()
 {
