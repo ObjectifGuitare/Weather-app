@@ -1,3 +1,7 @@
+export {bigErrorOmg, displayNewWeather, displayStoredWeather};
+
+let OpenWeatherappId = "15503d995eb403b985f0761f2345534a"
+
 function bigErrorOmg()
 {
     alert("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
@@ -8,14 +12,14 @@ function displayNewWeather(e)
     if(!cities.value)
     return;
     let latLon = [];
-    fetch("http://api.openweathermap.org/geo/1.0/direct?q="+cities.value+"&limit=1&appid=15503d995eb403b985f0761f2345534a")
+    fetch("https://api.openweathermap.org/geo/1.0/direct?q="+cities.value+"&limit=1&appid=15503d995eb403b985f0761f2345534a")
     .then(res => res.json())
     .then(obj =>{
         // console.log(obj)
         latLon.push(obj[0].lat);
         latLon.push(obj[0].lon);
         console.log(obj[0].lat)
-        fetch("http://api.openweathermap.org/data/2.5/forecast?lat="+latLon[0]+"&lon="+latLon[1]+"&appid=" + OpenWeatherappId)
+        fetch("https://api.openweathermap.org/data/2.5/forecast?lat="+latLon[0]+"&lon="+latLon[1]+"&appid=" + OpenWeatherappId)
         .then(res => { 
             let a = res.json()
             console.log(typeof(a))

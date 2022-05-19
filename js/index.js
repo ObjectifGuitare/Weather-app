@@ -1,10 +1,12 @@
+import {bigErrorOmg, displayNewWeather, displayStoredWeather} from "./weather.js";
+import {compareWeather} from "./compare.js";
+
+
 let cities = document.body.querySelector("#cities");
 let submit = document.body.querySelector("#submit");
 let compareBtn = document.body.querySelector(".compareBtn")
 let clearPrevious = document.body.querySelector("#clear")
-let OpenWeatherappId = "15503d995eb403b985f0761f2345534a"
-let cityOne = document.body.querySelector("#city1")
-let cityTwo = document.body.querySelector("#city2")
+
 
 
 

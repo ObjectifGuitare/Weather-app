@@ -1,7 +1,7 @@
-4071
-58/home/becode/Documents/weather/dist/index.3a01df49.css.map1652946256509616242 0
+4069
+58/home/becode/Documents/weather/dist/index.3a01df49.css.map1652944799259968128 0
 53/home/becode/Documents/weather/dist/index.c36f364e.js1652944799255968104 0
-44/home/becode/Documents/weather/js/compare.js1652946397391251143 0
+44/home/becode/Documents/weather/js/compare.js1652945431482837041 0
 60/home/becode/Documents/weather/node_modules/get-port/license1652944665748359418 0
 63/home/becode/Documents/weather/node_modules/get-port/index.d.ts1652944665596361460 0
 52/home/becode/Documents/weather/node_modules/get-port1652944665748359418 1
@@ -443,7 +443,7 @@
 64/home/becode/Documents/weather/node_modules/node-addon-api/tools1652944666944343528 1
 70/home/becode/Documents/weather/node_modules/node-addon-api/except.gypi1652944664296379053 0
 72/home/becode/Documents/weather/node_modules/node-addon-api/noexcept.gypi1652944664328378617 0
-46/home/becode/Documents/weather/dist/index.html1652946256521616356 0
+46/home/becode/Documents/weather/dist/index.html1652944799271968198 0
 70/home/becode/Documents/weather/node_modules/node-addon-api/common.gypi1652944664272379379 0
 71/home/becode/Documents/weather/node_modules/css-select/lib/compile.d.ts1652944666828345065 0
 67/home/becode/Documents/weather/node_modules/node-addon-api/index.js1652944666420350470 0
@@ -612,7 +612,7 @@
 75/home/becode/Documents/weather/node_modules/caniuse-lite/data/regions/SI.js1652944670252300993 0
 75/home/becode/Documents/weather/node_modules/caniuse-lite/data/regions/KY.js1652944669756307244 0
 75/home/becode/Documents/weather/node_modules/caniuse-lite/data/regions/BT.js1652944667808332232 0
-35/home/becode/Documents/weather/dist1652946425407636117 1
+35/home/becode/Documents/weather/dist1652944799279968246 1
 75/home/becode/Documents/weather/node_modules/caniuse-lite/data/regions/TW.js1652944670392299240 0
 75/home/becode/Documents/weather/node_modules/caniuse-lite/data/regions/AL.js1652944665996356087 0
 75/home/becode/Documents/weather/node_modules/caniuse-lite/data/regions/YT.js1652944670520297638 0
@@ -1146,7 +1146,7 @@
 83/home/becode/Documents/weather/node_modules/css-tree/lib/syntax/pseudo/nth-child.js1652944668704320656 0
 126/home/becode/Documents/weather/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/sub/b1652944668188327301 1
 124/home/becode/Documents/weather/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/sub1652944668920317873 1
-42/home/becode/Documents/weather/js/index.js1652946335178463589 0
+42/home/becode/Documents/weather/js/index.js1652945566263142546 0
 68/home/becode/Documents/weather/node_modules/yaml/dist/test-events.js1652944667328338502 0
 122/home/becode/Documents/weather/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/b1652944667996329775 1
 133/home/becode/Documents/weather/node_modules/@parcel/node-resolver-core/test/fixture/node_modules/side-effects-false-glob/package.json1652944669076315878 0
@@ -1332,7 +1332,7 @@
 93/home/becode/Documents/weather/node_modules/@parcel/package-manager/src/promiseFromProcess.js1652944667736333172 0
 65/home/becode/Documents/weather/node_modules/@parcel/namer-default1652944665744359472 1
 84/home/becode/Documents/weather/node_modules/@parcel/codeframe/test/codeframe.test.js1652944668112328280 0
-54/home/becode/Documents/weather/dist/index.3a01df49.css1652946256501616165 0
+54/home/becode/Documents/weather/dist/index.3a01df49.css1652944799255968104 0
 78/home/becode/Documents/weather/node_modules/@parcel/codeframe/lib/codeframe.js1652944668012329568 0
 65/home/becode/Documents/weather/node_modules/@parcel/codeframe/src1652944668032329311 1
 61/home/becode/Documents/weather/node_modules/@parcel/codeframe1652944668128328074 1
@@ -1399,7 +1399,6 @@
 89/home/becode/Documents/weather/node_modules/@parcel/transformer-svg/lib/SVGTransformer.js1652944665852358022 0
 87/home/becode/Documents/weather/node_modules/cosmiconfig/dist/getPropertyByPath.d.ts.map1652944665996356087 0
 99/home/becode/Documents/weather/node_modules/@parcel/transformer-js/parcel-swc.linux-arm64-musl.node1652944672860268846 0
-57/home/becode/Documents/weather/dist/index.5d9dacde.js.map1652946425407636117 0
 66/home/becode/Documents/weather/node_modules/css-tree/lib/generator1652944668940317616 1
 71/home/becode/Documents/weather/node_modules/@parcel/transformer-svg/lib1652944665784358935 1
 81/home/becode/Documents/weather/node_modules/@parcel/transformer-svg/src/inline.js1652944665640360869 0
@@ -2121,7 +2120,6 @@
 75/home/becode/Documents/weather/node_modules/css-tree/lib/tokenizer/utils.js1652944669028316488 0
 93/home/becode/Documents/weather/node_modules/caniuse-lite/data/features/http-live-streaming.js1652944669604309175 0
 73/home/becode/Documents/weather/node_modules/@parcel/packager-html/LICENSE1652944665316365221 0
-53/home/becode/Documents/weather/dist/index.5d9dacde.js1652946425403636060 0
 72/home/becode/Documents/weather/node_modules/@parcel/cache/src/FSCache.js1652944665024369143 0
 72/home/becode/Documents/weather/node_modules/webidl-conversions/README.md1652944663660387777 0
 92/home/becode/Documents/weather/node_modules/lmdb/prebuilds/linux-arm64/node.abi83.glibc.node1652944670744294835 0
@@ -2734,7 +2732,7 @@
 92/home/becode/Documents/weather/node_modules/@parcel/runtime-js/lib/helpers/node/js-loader.js1652944667044342212 0
 75/home/becode/Documents/weather/node_modules/@swc/helpers/src/_instanceof.js1652944668204327095 0
 87/home/becode/Documents/weather/node_modules/@parcel/core/lib/TargetDescriptor.schema.js1652944669160314812 0
-44/home/becode/Documents/weather/js/weather.js1652946415547498592 0
+44/home/becode/Documents/weather/js/weather.js1652945418154417576 0
 81/home/becode/Documents/weather/node_modules/@parcel/reporter-cli/src/logLevels.js1652944667164340644 0
 65/home/becode/Documents/weather/node_modules/@parcel/hash/index.js1652944665104368069 0
 66/home/becode/Documents/weather/node_modules/@lezer/lr/package.json1652944665628361030 0
