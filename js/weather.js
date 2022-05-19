@@ -1,6 +1,12 @@
-export {bigErrorOmg, displayNewWeather, displayStoredWeather};
+import {rules} from "./chart_obj.js"
 
 let OpenWeatherappId = "15503d995eb403b985f0761f2345534a"
+let tempOne = 0;
+let tempTwo = 0; 
+let tempThree = 0; 
+let tempFour = 0; 
+let tempFive = 0;
+export {tempOne, tempTwo, tempThree, tempFour, tempFive};
 
 function bigErrorOmg()
 {
@@ -32,18 +38,22 @@ function displayNewWeather(e)
                 bigErrorOmg();
                 return;
             }
-            obj.list[0].main.temp = Math.ceil(Number(obj.list[0].main.temp) - 273.15);
-            obj.list[1].main.temp = Math.ceil(Number(obj.list[1].main.temp) - 273.15);
-            obj.list[2].main.temp = Math.ceil(Number(obj.list[2].main.temp) - 273.15);
-            obj.list[3].main.temp = Math.ceil(Number(obj.list[3].main.temp) - 273.15);
-            obj.list[4].main.temp = Math.ceil(Number(obj.list[4].main.temp) - 273.15);
+            tempOne = Math.ceil(Number(obj.list[0].main.temp) - 273.15);
+            tempTwo = Math.ceil(Number(obj.list[1].main.temp) - 273.15);
+            tempThree = Math.ceil(Number(obj.list[2].main.temp) - 273.15);
+            tempFour = Math.ceil(Number(obj.list[3].main.temp) - 273.15);
+            tempFive = Math.ceil(Number(obj.list[4].main.temp) - 273.15);
+            rules.data.datasets[0].data = [tempOne, tempTwo, tempThree, tempFour, tempFive];
+            const ctx = document.getElementById('graph').getContext('2d');
+            const myChart = new Chart(ctx, rules)
+            
             let div = document.createElement("div");
             
             document.body.querySelector("main").appendChild(div);
-            div.innerHTML = obj.city.name + " " + obj.list[0].main.temp + "°C" + " "+ obj.list[1].main.temp + "°C" + " "+ obj.list[2].main.temp + "°C" + " "+ obj.list[3].main.temp + "°C" + " "+ obj.list[4].main.temp + "°C" + " ";
+            div.innerHTML = obj.city.name + " " + tempOne + "°C" + " "+ tempTwo + "°C" + " "+ tempThree + "°C" + " "+ tempFour + "°C" + " "+ tempFive + "°C" + " ";
             window.localStorage.setItem(cities.value, JSON.stringify(obj))
 
-
+            
 
             fetch("https://api.unsplash.com/photos/random?query="+cities.value, {headers :{Authorization: "Client-ID jE4dvuuzG4RCh5skxUQ1hSkPhtSmt_Zq-eRcZzCSo-s"}})
             .then(res => res.json())
@@ -79,3 +89,62 @@ function displayStoredWeather()
         div.innerHTML = jsoned.city.name + " " + jsoned.list[0].main.temp + "°C"+ " " + jsoned.list[1].main.temp + "°C"+ " " + jsoned.list[2].main.temp + "°C"+ " " + jsoned.list[3].main.temp + "°C"+ " " + jsoned.list[4].main.temp + "°C";
     }
 }
+
+import {
+    Chart,
+    ArcElement,
+    LineElement,
+    BarElement,
+    PointElement,
+    BarController,
+    BubbleController,
+    DoughnutController,
+    LineController,
+    PieController,
+    PolarAreaController,
+    RadarController,
+    ScatterController,
+    CategoryScale,
+    LinearScale,
+    LogarithmicScale,
+    RadialLinearScale,
+    TimeScale,
+    TimeSeriesScale,
+    Decimation,
+    Filler,
+    Legend,
+    Title,
+    Tooltip,
+    SubTitle
+  } from 'chart.js';
+  
+  Chart.register(
+    ArcElement,
+    LineElement,
+    BarElement,
+    PointElement,
+    BarController,
+    BubbleController,
+    DoughnutController,
+    LineController,
+    PieController,
+    PolarAreaController,
+    RadarController,
+    ScatterController,
+    CategoryScale,
+    LinearScale,
+    LogarithmicScale,
+    RadialLinearScale,
+    TimeScale,
+    TimeSeriesScale,
+    Decimation,
+    Filler,
+    Legend,
+    Title,
+    Tooltip,
+    SubTitle
+  );
+
+
+export {bigErrorOmg, displayNewWeather, displayStoredWeather};
+

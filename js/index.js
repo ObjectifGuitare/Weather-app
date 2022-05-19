@@ -1,3 +1,6 @@
+
+
+
 import {bigErrorOmg, displayNewWeather, displayStoredWeather} from "./weather.js";
 import {compareWeather} from "./compare.js";
 
@@ -174,3 +177,5 @@ clearPrevious.addEventListener("click", () => {
 
 // }
 // displayImage()
+
+
