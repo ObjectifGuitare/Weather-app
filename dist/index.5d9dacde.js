@@ -740,6 +740,10 @@ function displayNewWeather(e) {
                 tempFour,
                 tempFive
             ];
+            if (document.body.querySelector("#graph")) document.body.querySelector("#graph").remove();
+            let canvas = document.createElement("canvas");
+            document.body.appendChild(canvas);
+            canvas.setAttribute("id", "graph");
             const ctx = document.getElementById('graph').getContext('2d');
             const myChart = new _chartJs.Chart(ctx, _chartObjJs.rules);
             let div = document.createElement("div");

@@ -44,6 +44,11 @@ function displayNewWeather(e)
             tempFour = Math.ceil(Number(obj.list[3].main.temp) - 273.15);
             tempFive = Math.ceil(Number(obj.list[4].main.temp) - 273.15);
             rules.data.datasets[0].data = [tempOne, tempTwo, tempThree, tempFour, tempFive];
+            if(document.body.querySelector("#graph"))
+                document.body.querySelector("#graph").remove()
+            let canvas = document.createElement("canvas");
+            document.body.appendChild(canvas);
+            canvas.setAttribute("id", "graph");
             const ctx = document.getElementById('graph').getContext('2d');
             const myChart = new Chart(ctx, rules)
             
