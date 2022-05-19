@@ -1,0 +1,16 @@
+body {
+  justify-content: space-between;
+  display: flex;
+}
+
+.btn {
+  border: 2px solid red;
+  margin: 5px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+/*# sourceMappingURL=index.3a01df49.css.map */

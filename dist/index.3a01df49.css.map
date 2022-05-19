@@ -1,0 +1,1 @@
+{"mappings":"AAAA;;;;;AAMA;;;;;AAMA","sources":["style.css"],"sourcesContent":["body\n{\n    display: flex;\n    justify-content: space-between;\n}\n\n.btn\n{\n    border: 2px red solid;\n    margin: 5px;\n}\n\nimg\n{\n    width: 100px;\n    height: 100px;\n}"],"names":[],"version":3,"file":"index.3a01df49.css.map","sourceRoot":"/__parcel_source_root/"}
